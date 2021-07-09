@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  selector:
+    matchLabels:
+      app: myapp
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: myapp
+        image node1:5000/master/my-running-app-thando:v1
+        ports:
+        - containersPort: 8080
+---
+apiVersion: apps/v1
+kind: Service
+
+metadata:
+  selector:
+      app: myapp
+  ports:
+    - protocol: TCP
+      port: 8080
