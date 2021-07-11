@@ -25,3 +25,7 @@ echo sonar.jdc.url=jdbc:postgresql://localhost/sonar >> /opt/sonarqube/conf/sona
 echo sonar.path.data=/var/sonarqube/data >> /opt/sonarqube/conf/sonar.properties
 echo sonar.path.temp=/var/sonarqube/temp  >> /opt/sonarqube/conf/sonar.properties
 
+## setup parameters
+echo vm.max_map_count=524288 >> /etc/sysctl.conf
+echo fs.file-max=131072 >> /etc/sysctl.conf
+
