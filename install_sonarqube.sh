@@ -31,3 +31,6 @@ echo fs.file-max=131072 >> /etc/sysctl.conf
 echo sonar hard nofile 65535 >> /etc/security/limits.conf
 echo sonar soft nofile 65535 >> /etc/security/limits.conf
 
+##start sonarqube
+/opt/sonarqube/bin/linux-x86-64/sonar.sh start
+
