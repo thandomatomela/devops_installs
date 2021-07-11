@@ -19,3 +19,9 @@ java -version
 adduser sonar
 chown -R sonar:sonar /opt/sonarqube
 
+sonar.jdc.username=sonar >> /opt/sonarqube/conf
+sonar.jdc.password=sonar >> /opt/sonarqube/conf
+sonar.jdc.url=jdbc:postgresql://localhost/sonar >> /opt/sonarqube/conf
+sonar.path.data=/var/sonarqube/data >> /opt/sonarqube/conf
+sonar.path.temp=/var/sonarqube/temp  >> /opt/sonarqube/conf
+
