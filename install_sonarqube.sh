@@ -34,5 +34,6 @@ echo sonar hard nofile 65535 >> /etc/security/limits.conf
 echo sonar soft nofile 65535 >> /etc/security/limits.conf
 
 ##start sonarqube
+sudo su - sonar
 /opt/sonarqube/bin/linux-x86-64/sonar.sh start
 
