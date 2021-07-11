@@ -28,4 +28,6 @@ echo sonar.path.temp=/var/sonarqube/temp  >> /opt/sonarqube/conf/sonar.propertie
 ## setup parameters
 echo vm.max_map_count=524288 >> /etc/sysctl.conf
 echo fs.file-max=131072 >> /etc/sysctl.conf
+echo sonar hard nofile 65535 >> /etc/security/limits.conf
+echo sonar soft nofile 65535 >> /etc/security/limits.conf
 
